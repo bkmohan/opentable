@@ -86,13 +86,13 @@ class SaveMoreDetailPipeline:
         # You can change the filename to whatever you want.
         self.file.write("{")
 
-        self.resturant_csvwriter = csv.writer(open(RESTURANT_FILENAME, 'w'), lineterminator='\n')
+        self.resturant_csvwriter = csv.writer(open(RESTURANT_FILENAME, 'w', encoding='utf-8-sig'), lineterminator='\n')
         self.resturant_csvwriter.writerow(RESTURANT_FIELDS)
 
-        self.menu_csvwriter = csv.writer(open(MENU_CSV_FILENAME, 'w'), lineterminator='\n')
+        self.menu_csvwriter = csv.writer(open(MENU_CSV_FILENAME, 'w', encoding='utf-8-sig'), lineterminator='\n')
         self.menu_csvwriter.writerow(MENU_FIELDS)
 
-        self.hours_csvwriter = csv.writer(open(HOURS_CSV_FILENAME, 'w'), lineterminator='\n')
+        self.hours_csvwriter = csv.writer(open(HOURS_CSV_FILENAME, 'w', encoding='utf-8-sig'), lineterminator='\n')
         self.hours_csvwriter.writerow(HOURS_FIELDS)
 
 

@@ -41,7 +41,7 @@ class ResturantsSpider(scrapy.Spider):
                 data = get_city_data(city[0].split(',')[0], self.auto_sha)
                 meta['city'] = city
                 yield scrapy.Request(url, method='POST', body=json.dumps(data), headers=headers, callback=self.parse_city, meta=meta, dont_filter=True)
-                break
+    
          
 
     def parse_city(self, response):
